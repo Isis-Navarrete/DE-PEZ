@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eliminar Alumno – DEPEZ</title>
+</head>
+<body>
+
+  <!-- Barra de herramientas de WordPress (solo se ve si estás logueado) -->
+  <div id="wpadminbar">
+    <!-- Accesos rápidos como cerrar sesión, editar, etc. -->
+  </div>
+
+  <!-- Encabezado principal del sitio -->
+  <header id="site-header">
+    <div class="site-branding">
+      <div class="site-title">
+        <!-- Título del sitio web con enlace al inicio -->
+        <a href="https://nonstop-taniz.mnz.dom.my.id/" rel="home">DEPEZ</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido principal de la página -->
+  <main id="content" class="site-main">
+
+    <!-- Contenedor de todo el contenido de la página de Elementor -->
+    <div class="page-content">
+      <div class="elementor elementor-104">
+        
+        <!-- Título de la sección -->
+        <div class="elementor-element">
+          <div class="elementor-widget-container">
+            <h2 class="elementor-heading-title">Alumno</h2>
+          </div>
+        </div>
+
+        <!-- Contenedor con botón de regreso y una imagen decorativa -->
+        <div class="elementor-element">
+          <div class="elementor-widget-container">
+            <!-- Botón para regresar a la página anterior -->
+            <a class="elementor-button" href="https://nonstop-taniz.mnz.dom.my.id/?page_id=65#">
+              <span class="elementor-button-text">Regresar</span>
+            </a>
+          </div>
+          <div class="elementor-widget-container">
+            <!-- Imagen de ícono o decoración del alumno -->
+            <img src="https://nonstop-taniz.mnz.dom.my.id/wp-content/uploads/2025/05/alumno.png" alt="Alumno" width="207" height="207">
+          </div>
+        </div>
+
+        <!-- Formulario de eliminación de alumno creado con Forminator -->
+        <div class="elementor-element">
+          <div class="elementor-widget-container">
+            <form id="forminator-module-1190" method="post" novalidate="novalidate">
+              
+              <!-- Campo de nombre del alumno -->
+              <div class="forminator-field">
+                <label for="forminator-field-name-1">Nombre:</label>
+                <input type="text" name="name-1" id="forminator-field-name-1" class="forminator-input">
+              </div>
+
+              <!-- Campo de apellido materno -->
+              <div class="forminator-field">
+                <label for="forminator-field-name-2">Apellido M:</label>
+                <input type="text" name="name-2" id="forminator-field-name-2" class="forminator-input">
+              </div>
+
+              <!-- Campo de apellido paterno -->
+              <div class="forminator-field">
+                <label for="forminator-field-name-3">Apellido P:</label>
+                <input type="text" name="name-3" id="forminator-field-name-3" class="forminator-input">
+              </div>
+
+              <!-- Campo ID del alumno (clave para la eliminación) -->
+              <div class="forminator-field">
+                <label for="forminator-field-name-4">ID:</label>
+                <input type="text" name="name-4" id="forminator-field-name-4" class="forminator-input">
+              </div>
+
+              <!-- Botón para enviar el formulario -->
+              <div class="forminator-field">
+                <button class="forminator-button forminator-button-submit">Eliminar</button>
+              </div>
+
+              <!-- Campos ocultos requeridos por Forminator -->
+              <input type="hidden" name="form_id" value="1190">
+              <input type="hidden" name="page_id" value="104">
+              <input type="hidden" name="action" value="forminator_submit_form_custom-forms">
+            </form>
+
+            <!-- Enlace para editar el formulario (visible solo para el administrador) -->
+            <div class="forminator-edit-module">
+              <small><a href="https://nonstop-taniz.mnz.dom.my.id/wp-admin/admin.php?page=forminator-cform-wizard&id=1190" target="_blank">Editar formulario</a></small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer id="site-footer">
+    <!-- Aquí va el footer del sitio si está definido -->
+  </footer>
+
+</body>
+</html>
