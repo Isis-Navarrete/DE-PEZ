@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Seleccionado - DEPEZ</title>
+    <style>
+        /* Estilos base para la plataforma DE-PEZ */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .auth-message {
+            background-color: #ffecec;
+            border-left: 4px solid #c81e5b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .auth-message svg {
+            fill: #c81e5b;
+            width: 24px;
+            height: 24px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #c81e5b;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .btn:hover {
+            background-color: #a4184a;
+        }
+        
+        .btn-back {
+            background-color: #6c757d;
+        }
+        
+        .btn-back:hover {
+            background-color: #5a6268;
+        }
+        
+        .page-title {
+            color: #c81e5b;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .page-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="wp-singular page-template-default page page-id-270 logged-in admin-bar">
+
+<!-- Header del sitio -->
+<header id="site-header" class="site-header">
+    <div class="site-branding">
+        <div class="site-title">
+            <a href="https://nonstop-taniz.mnz.dom.my.id/" title="Home" rel="home">DEPEZ</a>
+        </div>
+    </div>
+</header>
+
+<!-- Contenido principal -->
+<main id="content" class="site-main">
+    <div class="container">
+        <!-- Título de la página -->
+        <h1 class="page-title">Grupo seleccionado</h1>
+        
+        <!-- Mensaje de autenticación -->
+        <div class="auth-message">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+            </svg>
+            <div>🚫 Debes iniciar sesión como tutor para ver esta información.</div>
+        </div>
+        
+        <!-- Contenedor para las materias (se llenará dinámicamente) -->
+        <div id="materias-container" style="display: none;">
+            <!-- Aquí se cargarán las materias del grupo seleccionado -->
+        </div>
+        
+        <!-- Botón de regreso -->
+        <div class="actions">
+            <a href="https://nonstop-taniz.mnz.dom.my.id/?page_id=88" class="btn btn-back">Volver</a>
+        </div>
+    </div>
+</main>
+
+<!-- Footer del sitio -->
+<footer id="site-footer" class="site-footer">
+    <div class="container">
+        <p>Sistema DE-PEZ &copy; <?php echo date('Y'); ?></p>
+    </div>
+</footer>
+
+<!-- Scripts necesarios -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Verificar si el usuario está autenticado como tutor
+        const isTutorAuthenticated = false; // Esto debería venir de la verificación de WordPress
+        
+        if (isTutorAuthenticated) {
+            // Ocultar mensaje de autenticación
+            document.querySelector('.auth-message').style.display = 'none';
+            
+            // Mostrar contenedor de materias
+            document.getElementById('materias-container').style.display = 'block';
+            
+            // Cargar materias del grupo seleccionado
+            loadGroupData();
+        }
+        
+        function loadGroupData() {
+            // Aquí iría la lógica para cargar las materias del grupo asignado al tutor
+            // mediante una llamada AJAX al backend de WordPress
+            
+            console.log('Cargando datos del grupo...');
+            // Ejemplo de implementación real:
+            /*
+            fetch('/wp-admin/admin-ajax.php?action=get_tutor_subjects', {
+                method: 'POST',
+                credentials: 'same-origin',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'user_id=' + currentUserID
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    renderSubjects(data.subjects);
+                } else {
+                    showError(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showError('Ocurrió un error al cargar las materias');
+            });
+            */
+        }
+        
+        function renderSubjects(subjects) {
+            // Lógica para renderizar la lista de materias
+            const container = document.getElementById('materias-container');
+            
+            if (subjects.length === 0) {
+                container.innerHTML = '<p>No tienes materias asignadas en este grupo.</p>';
+                return;
+            }
+            
+            let html = '<h3>Materias asignadas</h3><ul class="subjects-list">';
+            
+            subjects.forEach(subject => {
+                html += `
+                    <li class="subject-item">
+                        <a href="/materia/?id=${subject.id}">${subject.name}</a>
+                        <span class="student-count">${subject.student_count} estudiantes</span>
+                    </li>
+                `;
+            });
+            
+            html += '</ul>';
+            container.innerHTML = html;
+        }
+        
+        function showError(message) {
+            const authMessage = document.querySelector('.auth-message');
+            authMessage.style.display = 'flex';
+            authMessage.querySelector('div').textContent = message;
+        }
+    });
+</script>
+
+</body>
+</html>

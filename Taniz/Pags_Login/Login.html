@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEPEZ - Inicio de Sesión</title>
+    <style>
+        /* Estilos principales para el sistema DE-PEZ */
+        :root {
+            --color-primario: #c81e5b; /* Color institucional */
+            --color-secundario: #2c3e50;
+            --color-texto: #333333;
+            --color-fondo: #f8f9fa;
+            --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        /* Encabezado del sistema */
+        .depez-header {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: white;
+            box-shadow: var(--sombra-suave);
+        }
+        
+        .depez-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--color-primario);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Contenedor del formulario de login */
+        .login-container {
+            max-width: 450px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--sombra-suave);
+        }
+        
+        .login-title {
+            color: var(--color-primario);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        /* Estilos para los campos del formulario */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        /* Estilos para el botón de submit */
+        .btn-login {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--color-primario);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-login:hover {
+            background-color: #a4184a;
+        }
+        
+        /* Mensajes de error/éxito */
+        .alert {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+        
+        .alert-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        /* Versión responsive */
+        @media (max-width: 576px) {
+            .login-container {
+                margin: 1.5rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado institucional -->
+    <header class="depez-header">
+        <h1 class="depez-title">DEPEZ</h1>
+        <p>Sistema de Desempeño Escolar</p>
+    </header>
+
+    <!-- Contenedor principal del formulario -->
+    <main class="login-container">
+        <h2 class="login-title">Iniciar Sesión</h2>
+        
+        <?php
+        // Manejo de errores de autenticación
+        if (isset($_GET['error'])) {
+            echo '<div class="alert alert-error">';
+            switch ($_GET['error']) {
+                case 'credenciales':
+                    echo 'Correo o contraseña incorrectos';
+                    break;
+                case 'sesion':
+                    echo 'La sesión ha expirado, por favor ingrese nuevamente';
+                    break;
+                default:
+                    echo 'Error al iniciar sesión';
+            }
+            echo '</div>';
+        }
+        ?>
+
+        <!-- Formulario de login que usa el shortcode [depez_login_form] -->
+        <div class="elementor-shortcode">
+            <form method="POST" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" class="login-form">
+                <input type="hidden" name="action" value="procesar_login">
+                
+                <div class="form-group">
+                    <label for="correo">Correo Institucional:</label>
+                    <input type="email" id="correo" name="correo" required autocomplete="username">
+                </div>
+                
+                <div class="form-group">
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" required autocomplete="current-password">
+                </div>
+                
+                <button type="submit" class="btn-login">Ingresar al Sistema</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Scripts para funcionalidad del login -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Validación básica del formulario del lado del cliente
+            const loginForm = document.querySelector('.login-form');
+            
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    const email = document.getElementById('correo').value;
+                    const password = document.getElementById('contrasena').value;
+                    
+                    // Validación simple de campos vacíos
+                    if (!email || !password) {
+                        e.preventDefault();
+                        alert('Por favor complete todos los campos');
+                        return false;
+                    }
+                    
+                    // Validación básica de formato de email
+                    if (!email.includes('@') || !email.includes('.')) {
+                        e.preventDefault();
+                        alert('Por favor ingrese un correo electrónico válido');
+                        return false;
+                    }
+                    
+                    return true;
+                });
+            }
+            
+            // Manejo de parámetros de URL para mostrar mensajes
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('redirect_to')) {
+                // Lógica para redirección después de login exitoso
+                console.log('Redirección pendiente a:', urlParams.get('redirect_to'));
+            }
+        });
+    </script>
+</body>
+</html>

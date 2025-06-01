@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEPEZ - Menú Tutor</title>
+    <style>
+        /* Estilos minimalistas según diseño */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #c81e5b; /* Color institucional DE-PEZ */
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+        
+        h2 {
+            color: #444;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #c81e5b;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+        
+        .status-message {
+            background-color: #fff3f3;
+            border-left: 4px solid #ff6b6b;
+            padding: 15px;
+            margin: 20px 0;
+            color: #d32f2f;
+            font-size: 1.1rem;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 8px 20px;
+            background-color: #c81e5b;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .back-button:hover {
+            background-color: #a21847;
+        }
+        
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ddd;
+            margin: 30px 0;
+        }
+        
+        /* Estilos para cuando hay materias (modo demo) */
+        .materias-list {
+            margin: 20px 0;
+        }
+        
+        .materia-item {
+            background: white;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .materia-name {
+            font-weight: bold;
+        }
+        
+        .materia-group {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <h1>DEPEZ</h1>
+    </header>
+    
+    <!-- Contenido principal -->
+    <main>
+        <h2>MATERIAS</h2>
+        
+        <!-- Mensaje del shortcode cuando no hay sesión -->
+        <div class="status-message">
+            ⛔ Debes iniciar sesión como tutor para ver las materias de tu grupo.
+        </div>
+        
+        <!-- Espacio para las materias cuando el tutor está autenticado -->
+        <div id="materias-container" style="display: none;">
+            <div class="materias-list">
+                <!-- Las materias se cargarán aquí dinámicamente -->
+            </div>
+        </div>
+        
+        <hr>
+        
+        <!-- Botón de regreso -->
+        <a href="https://nonstop-taniz.mnz.dom.my.id/?page_id=32" class="back-button">
+            Regresar
+        </a>
+    </main>
+
+    <!-- JavaScript para funcionalidad -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Verificar si estamos en modo demo (?demo=1)
+            const urlParams = new URLSearchParams(window.location.search);
+            const demoMode = urlParams.get('demo');
+            
+            if (demoMode === '1') {
+                // Mostrar versión demo con materias de ejemplo
+                mostrarMateriasDemo();
+            }
+            
+            // Aquí iría la lógica real para verificar la sesión del tutor
+            // y cargar sus materias desde el servidor
+        });
+        
+        function mostrarMateriasDemo() {
+            const statusMsg = document.querySelector('.status-message');
+            const materiasContainer = document.getElementById('materias-container');
+            
+            // Ocultar mensaje de no autenticado
+            statusMsg.style.display = 'none';
+            
+            // Mostrar contenedor de materias
+            materiasContainer.style.display = 'block';
+            
+            // Datos de ejemplo
+            const materiasEjemplo = [
+                { nombre: "Matemáticas Avanzadas", grupo: "Grupo A-101" },
+                { nombre: "Física Cuántica", grupo: "Grupo B-205" },
+                { nombre: "Programación Web", grupo: "Grupo C-302" }
+            ];
+            
+            // Generar HTML de las materias
+            const materiasList = materiasContainer.querySelector('.materias-list');
+            materiasList.innerHTML = '';
+            
+            materiasEjemplo.forEach(materia => {
+                const item = document.createElement('div');
+                item.className = 'materia-item';
+                item.innerHTML = `
+                    <span class="materia-name">${materia.nombre}</span>
+                    <span class="materia-group">${materia.grupo}</span>
+                `;
+                materiasList.appendChild(item);
+            });
+        }
+    </script>
+</body>
+</html>
