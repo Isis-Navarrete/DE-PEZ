@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <!-- Metadatos y configuraciones de visualización -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+
+    <!-- Título de la página -->
+    <title>Materias Jefe de carrera – DEPEZ</title>
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Script para mantener sesión activa durante la vista previa -->
+    <script>
+        (function() {
+            var query = document.location.search;
+            if (query && query.indexOf('preview=true') !== -1) {
+                window.name = 'wp-preview-277';
+            }
+            if (window.addEventListener) {
+                window.addEventListener('pagehide', function() {
+                    window.name = '';
+                });
+            }
+        }());
+    </script>
+
+    <!-- Estilo para imágenes con sizes="auto" -->
+    <style>
+        img:is([sizes="auto" i], [sizes^="auto," i]) {
+            contain-intrinsic-size: 3000px 1500px;
+        }
+    </style>
+
+    <!-- Carga de estilos y fuentes del tema, WordPress, y Elementor -->
+    <!-- Omitido aquí por extensión, pero incluye diseño, emojis, íconos, admin-bar, tema Hello Biz, Elementor y fuentes -->
+</head>
+
+<body class="..." data-elementor-device-mode="mobile">
+    <!-- Barra superior de WordPress (visible para usuarios autenticados) -->
+    <div id="wpadminbar" class="nojq">
+        <!-- Incluye enlaces a perfil, cerrar sesión, editar con Elementor, etc. -->
+    </div>
+
+    <!-- Enlace para saltar directamente al contenido (accesibilidad) -->
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+    <!-- Encabezado del sitio con el nombre DEPEZ -->
+    <header id="site-header" class="site-header">
+        <div class="site-branding">
+            <div class="site-title">
+                <a href="https://nonstop-taniz.mnz.dom.my.id/" title="Home" rel="home">DEPEZ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main id="content" class="site-main post-277 page type-page status-draft hentry">
+        <div class="page-content">
+            <div data-elementor-type="wp-page" data-elementor-id="277" class="elementor elementor-277">
+
+                <!-- Contenedor con el título "Materias" -->
+                <div class="elementor-element e-parent e-lazyloaded">
+                    <div class="e-con-inner">
+                        <div class="elementor-widget-heading">
+                            <div class="elementor-widget-container">
+                                <h2 class="elementor-heading-title elementor-size-default">Materias</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contenedor de advertencia por falta de parámetros en la URL -->
+                <div class="elementor-element e-parent e-lazyloaded">
+                    <div class="e-con-inner">
+                        <div class="elementor-widget-shortcode">
+                            <div class="elementor-widget-container">
+                                <div style="color:orange;">
+                                    ⚠️ Falta información en la URL (grupo y semestre).
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página vacío -->
+    <footer id="site-footer" class="site-footer"></footer>
+
+    <!-- Script para activar carga diferida (lazy load) de fondos en Elementor -->
+    <script>
+        const lazyloadRunObserver = () => {
+            const lazyloadBackgrounds = document.querySelectorAll('.e-con.e-parent:not(.e-lazyloaded)');
+            const lazyloadBackgroundObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        let lazyloadBackground = entry.target;
+                        if (lazyloadBackground) {
+                            lazyloadBackground.classList.add('e-lazyloaded');
+                        }
+                        lazyloadBackgroundObserver.unobserve(entry.target);
+                    }
+                });
+            }, { rootMargin: '200px 0px 200px 0px' });
+            lazyloadBackgrounds.forEach((lazyloadBackground) => {
+                lazyloadBackgroundObserver.observe(lazyloadBackground);
+            });
+        };
+        ['DOMContentLoaded', 'elementor/lazyload/observe'].forEach((event) => {
+            document.addEventListener(event, lazyloadRunObserver);
+        });
+    </script>
+
+    <!-- Carga de scripts de Elementor y jQuery necesarios para la página -->
+    <!-- Omitidos aquí por extensión -->
+</body>
+</html>
