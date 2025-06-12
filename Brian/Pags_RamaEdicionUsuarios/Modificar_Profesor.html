@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modificar Profesor – DEPEZ</title>
+</head>
+<body>
+
+  <!-- Botón para regresar a la página anterior -->
+  <a class="elementor-button" href="https://nonstop-taniz.mnz.dom.my.id/?page_id=65">
+    <span class="elementor-button-text">Regresar</span>
+  </a>
+
+  <!-- Imagen decorativa del profesor -->
+  <img src="https://nonstop-taniz.mnz.dom.my.id/wp-content/uploads/2025/05/Logo_Prof-1.png" width="218" height="218" alt="Profesor">
+
+  <!-- Formulario para modificar datos del profesor -->
+  <form class="ehp-form" method="post">
+    <!-- Título del formulario -->
+    <h2 class="ehp-form__heading">Profesor</h2>
+
+    <!-- Campo: Nombre -->
+    <input type="text" name="form_fields[name]" placeholder="Name">
+
+    <!-- Campo: Apellido Paterno -->
+    <input type="text" name="form_fields[email]" placeholder="Apellido P" required>
+
+    <!-- Campo: Apellido Materno -->
+    <input type="text" name="form_fields[message]" placeholder="Apellido M">
+
+    <!-- Campo adicional 1 (sin etiqueta) -->
+    <input type="text" name="form_fields[]">
+
+    <!-- Campo adicional 2 -->
+    <input type="text" name="form_fields[]">
+
+    <!-- Campo adicional 3 -->
+    <input type="text" name="form_fields[]">
+
+    <!-- Campo: Correo -->
+    <input type="email" name="form_fields[]" placeholder="Correo">
+
+    <!-- Campo: Contraseña -->
+    <input type="text" name="form_fields[]" placeholder="Contraseña">
+
+    <!-- Botón para guardar los cambios -->
+    <button type="submit">Guardar</button>
+  </form>
+
+  <!-- Tabla de profesores para seleccionar uno y llenar el formulario -->
+  <table border="1" cellpadding="6" cellspacing="0" style="width:100%; border-collapse:collapse;">
+    <thead style="background:#ddd;">
+      <tr>
+        <th>ID</th>
+        <th>Nombre completo</th>
+        <th>Correo</th>
+        <th>Teléfono</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Ejemplo de fila (profesor) -->
+      <tr>
+        <td>49</td>
+        <td>Alicia Romero Vega</td>
+        <td>alicia.romero@itspc.edu.mx</td>
+        <td>8715550028</td>
+        <td>
+          <!-- Botón que llena automáticamente el formulario con datos del profesor -->
+          <button onclick='llenarFormularioProfesor({
+            "id":"49",
+            "nombre":"Alicia",
+            "apellido_pat":"Romero",
+            "apellido_mat":"Vega",
+            "correo":"alicia.romero@itspc.edu.mx",
+            "telefono":"8715550028"
+          })'>Seleccionar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
