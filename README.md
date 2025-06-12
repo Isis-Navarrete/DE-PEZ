@@ -7,7 +7,7 @@ Brindar a los docentes una herramienta intuitiva para agregar, modificar o elimi
 
 🧱 Tecnologías utilizadas
 - WordPress (como CMS)
-- Plugins: Elementor, Forminator, Hello Plus, Duplicator
+- Plugins: Elementor, Forminator, Hello Plus, Duplicator,WP Mail SMTP
 - HTML, CSS, JavaScript, PHP
 - Base de datos MySQL (phpMyAdmin)
 - Servidor: DomCloud
