@@ -17,6 +17,7 @@ Brindar a los docentes una herramienta intuitiva para agregar, modificar o elimi
 - Pluguin personalizado: tabla-alertas(Shortcode:[tabla_alertas_depez
 - pluguin personalizado: agregar-alumno (Sortcode:[formulario_registro_alumno])
 - Pluguin personalizado: modificar-alumno(Shortcode:[modificar_alumno_from])
+- Plugin personalizado: eliminar-alumno(Shortcode:[formulario_eliminar_alumno])
 
 🔐 Roles del sistema
 - *Jefe de carrera*: Control total, vista global de calificaciones y profesores.
