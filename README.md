@@ -41,7 +41,7 @@ La mayoría de las funciones se encuentran implementadas y probadas. Algunos mó
 - Brandon Gael Medina Martínez
 - José Ignacio Ramirez Hernández
 
-⚙️ Instalación local
+Instalación local
 1.-Clona este repositorio en tu equipo:
 
 git clone https://github.com/Isis-Navarrete/DE-PEZ.git
