@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Botones por Grupo Docente DEPEZ
  * Description: Muestra los grupos y semestres que imparte el docente, redirige con parámetros correctos.
- * Version: 1.5
+ * Version: 1.6.1
  * Author: Juan Taniz
  */
 
@@ -20,7 +20,6 @@ function mostrar_botones_grupos_docente() {
 
     $id_usuario = intval($_SESSION['usuario_id']);
 
-    // Obtener roles
     $roles = $wpdb->get_col($wpdb->prepare(
         "SELECT id_rol FROM usuariorol WHERE id_usuario = %d", $id_usuario
     ));
@@ -29,44 +28,65 @@ function mostrar_botones_grupos_docente() {
         return '<p>Acceso restringido. Solo para docentes.</p>';
     }
 
-    // Obtener grupos y semestre donde imparte clases
     $resultados = $wpdb->get_results($wpdb->prepare(
         "SELECT DISTINCT id_grupo AS grupo_id, semestre
          FROM asignacionusuariomateria
-         WHERE id_usuario = %d", $id_usuario
+         WHERE id_usuario = %d
+         ORDER BY semestre, grupo_id", $id_usuario
     ));
 
     if (!$resultados) {
         return '<p>No se encontraron grupos asignados para este docente.</p>';
     }
 
-    // Depuración opcional (puedes comentar esto si ya no lo necesitas)
-    /*echo "<pre>DEBUG: Resultados encontrados en asignacionusuariomateria:\n";
-    print_r($resultados);
-    echo "</pre>";*/
-
-    // Generar botones
-    $html = '<h3>Selecciona un grupo:</h3>';
-    $html .= '<div style="display: flex; flex-wrap: wrap; gap: 12px;">';
-
+    $agrupado = [];
     foreach ($resultados as $fila) {
         $nombre_grupo = $wpdb->get_var($wpdb->prepare(
             "SELECT nombre FROM grupo WHERE id_grupo = %d", $fila->grupo_id
         ));
+        $agrupado[$fila->semestre][] = $nombre_grupo;
+    }
 
-        $grupo = esc_attr($nombre_grupo);
-        $semestre = esc_attr($fila->semestre);
-        $url = site_url("/?page_id=1063&grupo=$grupo&semestre=$semestre");
+    $html = '<div class="contenedor-semestres">';
 
-        $html .= "<a href='$url' class='boton-grupo'>$grupo - $semestre</a>";
+    foreach ($agrupado as $semestre => $grupos) {
+        $html .= "<div class='bloque-semestre'>";
+        $html .= "<h3 class='titulo-semestre'>Semestre $semestre</h3>";
+        $html .= "<div class='grupos-botones'>";
+        foreach ($grupos as $grupo) {
+            $url = site_url("/?page_id=1063&grupo=$grupo&semestre=$semestre");
+            $html .= "<a href='$url' class='boton-grupo'>$grupo</a>";
+        }
+        $html .= "</div></div>";
     }
 
     $html .= '</div>';
 
     $html .= "
     <style>
+        .contenedor-semestres {
+            max-width: 600px;
+            margin: auto;
+            font-family: Arial;
+        }
+        .bloque-semestre {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 15px;
+        }
+        .titulo-semestre {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .grupos-botones {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
         .boton-grupo {
-            background-color: #e60039;
+            background-color: #555;
             color: white;
             padding: 10px 18px;
             text-decoration: none;
@@ -74,12 +94,13 @@ function mostrar_botones_grupos_docente() {
             font-family: Arial;
             font-weight: bold;
             transition: background-color 0.3s;
+            min-width: 48px;
+            text-align: center;
         }
         .boton-grupo:hover {
-            background-color: #b4002e;
+            background-color: #333;
         }
     </style>";
 
     return $html;
 }
-
