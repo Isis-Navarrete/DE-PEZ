@@ -45,11 +45,8 @@ La mayoría de las funciones se encuentran implementadas y probadas. Algunos mó
 - José Ignacio Ramirez Hernández
 
  ⚙️ Instalación Local
-
 Requisitos Previos
-
 Antes de iniciar con el procedimiento, se debe verificar que el equipo cuente con las siguientes aplicaciones instaladas:
-
 - XAMPP  
 - Apache  
 - MySQL  
@@ -62,11 +59,9 @@ Antes de iniciar con el procedimiento, se debe verificar que el equipo cuente co
 > Como alternativa, se puede ejecutar la página en un equipo donde no se haya instalado XAMPP previamente.
 
  Paso 1. Clonar el Repositorio
-
 1. Abrir Visual Studio Code.  
 2. Abrir la terminal desde el menú superior.  
-3. Pegar el enlace del repositorio:
-   https://github.com/Isis-Navarrete/DE-PEZ.git
+3. Pegar el enlace del repositorio: https://github.com/Isis-Navarrete/DE-PEZ.git
 4. Dirigirse al explorador de archivos e ingresar a la carpeta con el siguiente comando: cd DE-PEZ
 5. Acceder a la carpeta DE-PEZ\wordpress\ y copiar la carpeta completa.
 
@@ -77,18 +72,13 @@ Antes de iniciar con el procedimiento, se debe verificar que el equipo cuente co
 - Archivo .htaccess  
 
  Paso 2. Importar la Base de Datos
-
-1. Abrir phpMyAdmin desde:    http://localhost/phpmyadmin
-
-2. Crear una base de datos con el nombre: 
-   nonstop_taniz_db
-3. Hacer clic en la opción Importar y seleccionar el archivo:  
-   DE-PEZ/nonstop_taniz_db.sql
+1. Abrir phpMyAdmin desde: http://localhost/phpmyadmin
+2. Crear una base de datos con el nombre: nonstop_taniz_db
+3. Hacer clic en la opción Importar y seleccionar el archivo: DE-PEZ/nonstop_taniz_db.sql
 4. Esperar a que se importen todas las tablas sin errores.
 
  Paso 3. Configurar wp-config.php
-
-1. Abrir el archivo en la siguiente ruta:                  C:\xampp\htdocs\DE-PEZ\Wordpress\wp-config.php
+1. Abrir el archivo en la siguiente ruta: C:\xampp\htdocs\DE-PEZ\Wordpress\wp-config.php
 2. Verificar que contenga la siguiente configuración (editar en caso necesario): php
 - define('DB_NAME', 'nonstop_taniz_db');
 - define('DB_USER', 'root');
@@ -99,22 +89,16 @@ Usuario root y contraseña vacía son los valores por defecto en XAMPP.
 En el código de wp-config.php vienen más indicaciones.
 
  Paso 4. Iniciar Apache y MySQL
-
 1. Abrir el panel de control de XAMPP.  
 2. Iniciar Apache y MySQL.  
 3. Asegurarse de que no haya errores.
-
 >  Si Apache falla, verificar que los puertos 80 o 443 no estén en uso.
 
 Paso 5. Acceder a la Página
-
-1. Abrir un navegador web e ingresar al siguiente enlace:  
-   http://localhost/DE-PEZ/Wordpress/
-
+1. Abrir un navegador web e ingresar al siguiente enlace: http://localhost/DE-PEZ/Wordpress/
 2. Desde allí se puede iniciar sesión con los usuarios ya registrados en la base de datos.
 
  Usuarios de prueba para iniciar sesión:
-
 Docente/Tutor  
 - Correo: laura.ramirez@itspc.edu.mx
 - Contraseña: pass654
@@ -124,17 +108,14 @@ Jefe de carrera
 - Contraseña: 120211234
 
  Usuario para acceder a WordPress (Rol administrador):
-
 - Usuario: juan.salazar.22isc@tecsanpedro.edu.mx  
 - Contraseña: 8)tBa4mgjsEyXDqvb3
 
  Usuario para acceder a PHPMyAdmin:
-
 - Usuario: nonstop-taniz  
 - Contraseña: 4qE_I-aD67q61D(Nun
 
- Contacto
-
+Contacto
 Para acceder al dominio donde está alojada la página o el administrador de archivos en Webmin, contactar a:
 
 Juan Taniz Salazar Franco  
