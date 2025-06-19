@@ -42,6 +42,7 @@ La mayoría de las funciones se encuentran implementadas y probadas. Algunos mó
 - José Ignacio Ramirez Hernández
 
 ⚙️Instalación local
+Instalación local
 Antes de iniciar con el procedimiento, se debe verificar que el equipo cuente con las siguientes aplicaciones instaladas:
 •	XAMPP 
 •	Apache
@@ -99,6 +100,7 @@ NOTA: Para acceder al dominio donde esta alojado la pagina o el administrador de
 Medios de contacto:
 •	Correo : juan.salazar.22isc@tecsanpedro.edu.mx
 •	Teléfono : 8721214433 (solo WhatsApp)
+
 
 
 > Proyecto académico desarrollado para la Unidad 4: Documentación Técnica
