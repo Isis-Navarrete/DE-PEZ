@@ -1,5 +1,6 @@
 Brian Guadalupe Fernández
-Rol de equipo: DBA y desarrollador de la página web
+- Rol de equipo: DBA y desarrollador de la página web
+  
 ###Tareas realizadas
 - Creo el modelo del domino de la documentación de la especificación de requisitos
 - Modificación de modelo de dominio
@@ -20,4 +21,5 @@ Rol de equipo: DBA y desarrollador de la página web
 - Creo el plugin modificar docente
 - Corrigio errores en el plugin agregar docentes
 - Corrigio errores en los plugins modificar y agregar docente, agregando un boton para regresar
+  
 ###Tecnologias usadas: WordPress, Elementor, forminator, HTML, Php, MySQL, Agregar-alumno, Modificar-alumno, Eliminar-Alumno
