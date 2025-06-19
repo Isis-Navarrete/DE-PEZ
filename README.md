@@ -41,77 +41,102 @@ La mayoría de las funciones se encuentran implementadas y probadas. Algunos mó
 - Brandon Gael Medina Martínez
 - José Ignacio Ramirez Hernández
 
-⚙️Instalación local
-Instalación local
--Antes de iniciar con el procedimiento, se debe verificar que el equipo cuente con las siguientes aplicaciones instaladas:
-•	XAMPP 
-•	Apache
-•	MySQL
-•	Git
+ ⚙️ Instalación Local
 
-Advertencia: Al momento de activar Apache o MySQL podrían surgir problemas; por lo tanto, se recomienda configurar correctamente los puertos para asegurar el buen funcionamiento del sistema. Como alternativa, se puede ejecutar la página en un equipo donde no se haya instalado XAMPP previamente.
-•	Visual Studio Code
-•	Navegador web
+Requisitos Previos
 
--Paso 1. Clonar el repositorio
+Antes de iniciar con el procedimiento, se debe verificar que el equipo cuente con las siguientes aplicaciones instaladas:
 
-Se debe clonar el repositorio en el equipo:
+- XAMPP  
+- Apache  
+- MySQL  
+- Git  
+- Visual Studio Code  
+- Navegador web  
 
-•	Abrir el programa Visual Studio Code
-•	Abrir la terminal desde el menú superior
-•	Pegar el enlace del repositorio: https://github.com/Isis-Navarrete/DE-PEZ.git
-•	Una vez hecho esto, dirigirse al explorador de archivos e ingresar a la carpeta con el siguiente comando: cd DE-PEZ
-•	Luego, desde el explorador de archivos, acceder a la carpeta DE-PEZ\wordpress\ y copiar la carpeta completa
--Se debe verificar que estén presentes los siguientes archivos:
-•	wp-config.php
-•	index.php
-•	Carpeta wp-content con plugins y temas
-•	Archivo .htaccess
+> **Advertencia**:  
+> Al momento de activar Apache o MySQL podrían surgir problemas. Se recomienda configurar correctamente los puertos para asegurar el buen funcionamiento del sistema.  
+> Como alternativa, se puede ejecutar la página en un equipo donde no se haya instalado XAMPP previamente.
 
--Paso 2. Importar la base de datos
-Se debe abrir phpMyAdmin desde http://localhost/phpmyadmin
-Crear una base de datos con el nombre: nonstop_taniz_db
-Hacer clic en la opción "Importar" y seleccionar el archivo: DE-PEZ/nonstop_taniz_db.sql
-Esperar a que se importen todas las tablas sin errores.
+ Paso 1. Clonar el Repositorio
 
--Paso 3. Configurar wp-config.php
-Una vez importada la base de datos, se debe abrir el archivo ubicado en C:\xampp\htdocs\DE-PEZ\Wordpress\wp-config.php
-Verificar que contenga la siguiente configuración (editar en caso necesario):
-define('DB_NAME', 'nonstop_taniz_db');
-define('DB_USER', 'root');
-define('DB_PASSWORD', '');
-define('DB_HOST', 'localhost');
-(Usuario root y contraseña vacía son los valores por defecto en XAMPP)
-(En el código del wp-config vienen mas indicaciones)
+1. Abrir Visual Studio Code.  
+2. Abrir la terminal desde el menú superior.  
+3. Pegar el enlace del repositorio:
+   https://github.com/Isis-Navarrete/DE-PEZ.git
+4. Dirigirse al explorador de archivos e ingresar a la carpeta con el siguiente comando: cd DE-PEZ
+5. Acceder a la carpeta DE-PEZ\wordpress\ y copiar la carpeta completa.
 
--Paso 4. Iniciar Apache y MySQL
-Se debe abrir el panel de control de XAMPP e iniciar Apache y MySQL. Asegurarse de que no haya errores. Si Apache falla, verificar que los puertos 80 o 443 no estén en uso por otros servicios.
+ Verificar que estén presentes los siguientes archivos:
+- wp-config.php  
+- index.php
+- Carpeta wp-content (con plugins y temas)  
+- Archivo .htaccess  
 
--Paso 5. Acceder a la página
-Abrir un navegador web e ingresar al siguiente enlace:
-http://localhost/DE-PEZ/Wordpress/
-Desde allí se puede iniciar sesión con los usuarios ya registrados en la base de datos.
-Usuarios de prueba para iniciar sesión:
-•	Docente/Tutor
--Correo: laura.ramirez@itspc.edu.mx
-Contraseña: pass654
-•	Jefe de carrera
-Correo: PabloUli@gmail.com
-Contraseña: 120211234
+ Paso 2. Importar la Base de Datos
 
-Usuario para acceder a WordPress (Rol administrador):
-•	Usuario: juan.salazar.22isc@tecsanpedro.edu.mx
-•	Contraseña: 8)tBa4mgjsEyXDqvb3
+1. Abrir phpMyAdmin desde:    http://localhost/phpmyadmin
 
-Usuario para acceder a PHPMyAdmin:
-•	Usuario: nonstop-taniz
-•	Contraseña: 4qE_I-aD67q61D(Nun
+2. Crear una base de datos con el nombre: 
+   nonstop_taniz_db
+3. Hacer clic en la opción Importar y seleccionar el archivo:  
+   DE-PEZ/nonstop_taniz_db.sql
+4. Esperar a que se importen todas las tablas sin errores.
 
-NOTA: Para acceder al dominio donde esta alojado la pagina o el administrador de archivos en webmin, contactar a Juan Taniz Salazar Franco
-Medios de contacto:
-•	Correo : juan.salazar.22isc@tecsanpedro.edu.mx
-•	Teléfono : 8721214433 (solo WhatsApp)
+ Paso 3. Configurar wp-config.php
 
+1. Abrir el archivo en la siguiente ruta:                  C:\xampp\htdocs\DE-PEZ\Wordpress\wp-config.php
+2. Verificar que contenga la siguiente configuración (editar en caso necesario): php
+- define('DB_NAME', 'nonstop_taniz_db');
+- define('DB_USER', 'root');
+- define('DB_PASSWORD', '');
+- define('DB_HOST', 'localhost');
+
+Usuario root y contraseña vacía son los valores por defecto en XAMPP.  
+En el código de wp-config.php vienen más indicaciones.
+
+ Paso 4. Iniciar Apache y MySQL
+
+1. Abrir el panel de control de XAMPP.  
+2. Iniciar Apache y MySQL.  
+3. Asegurarse de que no haya errores.
+
+>  Si Apache falla, verificar que los puertos 80 o 443 no estén en uso.
+
+Paso 5. Acceder a la Página
+
+1. Abrir un navegador web e ingresar al siguiente enlace:  
+   http://localhost/DE-PEZ/Wordpress/
+
+2. Desde allí se puede iniciar sesión con los usuarios ya registrados en la base de datos.
+
+ Usuarios de prueba para iniciar sesión:
+
+Docente/Tutor  
+- Correo: laura.ramirez@itspc.edu.mx
+- Contraseña: pass654
+
+Jefe de carrera  
+- Correo: PabloUli@gmail.com  
+- Contraseña: 120211234
+
+ Usuario para acceder a WordPress (Rol administrador):
+
+- Usuario: juan.salazar.22isc@tecsanpedro.edu.mx  
+- Contraseña: 8)tBa4mgjsEyXDqvb3
+
+ Usuario para acceder a PHPMyAdmin:
+
+- Usuario: nonstop-taniz  
+- Contraseña: 4qE_I-aD67q61D(Nun
+
+ Contacto
+
+Para acceder al dominio donde está alojada la página o el administrador de archivos en Webmin, contactar a:
+
+Juan Taniz Salazar Franco  
+- Correo: juan.salazar.22isc@tecsanpedro.edu.mx  
+- Teléfono: 8721214433 (solo WhatsApp)
 
 
 > Proyecto académico desarrollado para la Unidad 4: Documentación Técnica
