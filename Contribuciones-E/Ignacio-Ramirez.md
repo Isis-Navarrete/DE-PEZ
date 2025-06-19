@@ -16,4 +16,5 @@ Jose Ignacio Ramirez Hernández
 - Realizo desarrollo de la página web en la rama de revisar jefe de carrera
 - Realizo conexiones entre botones y paginas
 - Elaboración de la documentación individual
+  
 ##Tecnologías usadas: WordPress, Elementor
