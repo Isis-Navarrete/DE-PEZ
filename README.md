@@ -41,54 +41,65 @@ La mayoría de las funciones se encuentran implementadas y probadas. Algunos mó
 - Brandon Gael Medina Martínez
 - José Ignacio Ramirez Hernández
 
-Instalación local
-1.-Clona este repositorio en tu equipo:
+⚙️Instalación local
+Antes de iniciar con el procedimiento, se debe verificar que el equipo cuente con las siguientes aplicaciones instaladas:
+•	XAMPP 
+•	Apache
+•	MySQL
+•	Git
+Advertencia: Al momento de activar Apache o MySQL podrían surgir problemas; por lo tanto, se recomienda configurar correctamente los puertos para asegurar el buen funcionamiento del sistema. Como alternativa, se puede ejecutar la página en un equipo donde no se haya instalado XAMPP previamente.
+•	Visual Studio Code
+•	Navegador web
+Paso 1. Clonar el repositorio
+Se debe clonar el repositorio en el equipo:
+•	Abrir el programa Visual Studio Code
+•	Abrir la terminal desde el menú superior
+•	Pegar el enlace del repositorio: https://github.com/Isis-Navarrete/DE-PEZ.git
+•	Una vez hecho esto, dirigirse al explorador de archivos e ingresar a la carpeta con el siguiente comando: cd DE-PEZ
+•	Luego, desde el explorador de archivos, acceder a la carpeta DE-PEZ\wordpress\ y copiar la carpeta completa
+Se debe verificar que estén presentes los siguientes archivos:
+•	wp-config.php
+•	index.php
+•	Carpeta wp-content con plugins y temas
+•	Archivo .htaccess
+Paso 3. Importar la base de datos
+Se debe abrir phpMyAdmin desde http://localhost/phpmyadmin
+Crear una base de datos con el nombre: nonstop_taniz_db
+Hacer clic en la opción "Importar" y seleccionar el archivo: DE-PEZ/nonstop_taniz_db.sql
+Esperar a que se importen todas las tablas sin errores.
+Paso 4. Configurar wp-config.php
+Una vez importada la base de datos, se debe abrir el archivo ubicado en C:\xampp\htdocs\DE-PEZ\Wordpress\wp-config.php
+Verificar que contenga la siguiente configuración (editar en caso necesario):
+define('DB_NAME', 'nonstop_taniz_db');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '');
+define('DB_HOST', 'localhost');
+(Usuario root y contraseña vacía son los valores por defecto en XAMPP)
+(En el código del wp-config vienen mas indicaciones)
+Paso 5. Iniciar Apache y MySQL
+Se debe abrir el panel de control de XAMPP e iniciar Apache y MySQL. Asegurarse de que no haya errores. Si Apache falla, verificar que los puertos 80 o 443 no estén en uso por otros servicios.
+Paso 6. Acceder a la página
+Abrir un navegador web e ingresar al siguiente enlace:
+http://localhost/DE-PEZ/Wordpress/
+Desde allí se puede iniciar sesión con los usuarios ya registrados en la base de datos.
+Usuarios de prueba para iniciar sesión:
+•	Docente/Tutor
+Correo: laura.ramirez@itspc.edu.mx
+Contraseña: pass654
+•	Jefe de carrera
+Correo: PabloUli@gmail.com
+Contraseña: 120211234
+Usuario para acceder a WordPress (Rol administrador):
+•	Usuario: juan.salazar.22isc@tecsanpedro.edu.mx
+•	Contraseña: 8)tBa4mgjsEyXDqvb3
+Usuario para acceder a PHPMyAdmin:
+•	Usuario: nonstop-taniz
+•	Contraseña: 4qE_I-aD67q61D(Nun
+NOTA: Para acceder al dominio donde esta alojado la pagina o el administrador de archivos en webmin, contactar a Juan Taniz Salazar Franco
+Medios de contacto:
+•	Correo : juan.salazar.22isc@tecsanpedro.edu.mx
+•	Teléfono : 8721214433 (solo WhatsApp)
 
-git clone https://github.com/Isis-Navarrete/DE-PEZ.git
-
-2.-Abre el proyecto en Visual Studio Code o tu editor favorito.
-
-3.-Instala un servidor local (por ejemplo, XAMPP o Laragon) con PHP y MySQL.
-
-4.-Copia la carpeta wordpress/ dentro de la carpeta pública de tu servidor:
-
-   -En XAMPP: C:\xampp\htdocs\depez
-
-   -En Laragon: C:\laragon\www\depez
-
-5.-Abre phpMyAdmin y crea una nueva base de datos:
-
-
-CREATE DATABASE depez_db CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-
-6.-Importa el archivo SQL ubicado en:
-
-/databases/nonstop_taniz_db.sql
-
-Puedes hacerlo desde phpMyAdmin o con este comando (si usas terminal):
-
-mysql -u root -p depez_db < databases/nonstop_taniz_db.sql
-
-7.-Configura el archivo wp-config.php:
-
-Ve a:
-
-/wordpress/wp-config.php
-
-Y asegúrate de que tenga estos valores (editando los reales si hace falta):
-
-
-Editar
-define( 'DB_NAME', 'depez_db' );
-define( 'DB_USER', 'root' );
-define( 'DB_PASSWORD', '' ); // Si usas XAMPP, déjalo vacío
-define( 'DB_HOST', 'localhost' );
-
-8.-Accede desde tu navegador a:
-
-http://localhost/depez
-
-¡Listo! Ya puedes iniciar sesión con los roles existentes.
 
 > Proyecto académico desarrollado para la Unidad 4: Documentación Técnica
 > Docente: Ruth Aivi Chávez Rodríguez | Ingeniería en Sistemas Computacionales | Junio 2025
