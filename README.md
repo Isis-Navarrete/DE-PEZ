@@ -54,7 +54,9 @@ Advertencia: Al momento de activar Apache o MySQL podrían surgir problemas; por
 •	Navegador web
 
 -Paso 1. Clonar el repositorio
+
 Se debe clonar el repositorio en el equipo:
+
 •	Abrir el programa Visual Studio Code
 •	Abrir la terminal desde el menú superior
 •	Pegar el enlace del repositorio: https://github.com/Isis-Navarrete/DE-PEZ.git
