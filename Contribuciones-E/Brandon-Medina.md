@@ -1,5 +1,6 @@
 Brandon Gael Medina Martínez
 - Rol de equipo: Diseñador y desarrollador
+
 ###Tareas realizadas
 - Realizo los diagramas de casos de uso y diagrama de secuencia
 - Agrego el sistema de docentes
