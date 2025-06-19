@@ -19,8 +19,8 @@ Brindar a los docentes una herramienta intuitiva para agregar, modificar o elimi
 - Pluguin personalizado: modificar-alumno(Shortcode:[modificar_alumno_from])
 - Plugin personalizado: eliminar-alumno(Shortcode:[formulario_eliminar_alumno])
 - Plugin personalizado: registrar-docente(Shortcode:[formulario_registro_docente])
--Plugin personalizado: modificar-docente(Shortcode:[formulario_editar_docente])
--Plugin personalizado: eliminar-docente(Shortcode:[formulario_eliminar_docente])
+- Plugin personalizado: modificar-docente(Shortcode:[formulario_editar_docente])
+- Plugin personalizado: eliminar-docente(Shortcode:[formulario_eliminar_docente])
 
 🔐 Roles del sistema
 - *Jefe de carrera*: Control total, vista global de calificaciones y profesores.
