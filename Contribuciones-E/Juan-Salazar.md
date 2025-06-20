@@ -17,3 +17,10 @@ Juan Taniz Salazar Franco
 - Modifico la interfaz de la tabla alertas
 
 ##Tecnologías usadas: WordPress, tabla-alertas, menú-tutor, DomCloud, Elementor, Alerta-académica, login-multirol, JavaScript
+
+##Commits
+- Cambios en base de datos para seguridad de contraseñas
+- Redirecciones dinámicas desde el login con JavaScript
+- Desarrollo de plugins personalizados: login, alertas y redirección de tutor
+- Creación de interfaces para menú del tutor y selección de grupos
+- Modificación de estructura de alertas y prueba de múltiples interfaces
