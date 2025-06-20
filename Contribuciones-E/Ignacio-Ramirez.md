@@ -20,17 +20,18 @@ Jose Ignacio Ramirez Hernández
 ##Tecnologías usadas: WordPress, Elementor
 
 ##Commits
-- Redactó el documento de Problemática y Solución del sistema
-- Condujo la entrevista para el levantamiento de requerimiento
-- Corrigió y mejoró los documentos de Problemática y Solución sobre el desempeño estudiantil
-- Modificó el aspecto visual de la página de Menú del Jefe de Carrera
-- Creó y desarrolló la página de Materias para el Jefe de Carera
-- Diseñó la interfaz de la página Materias del Jefe de Carrera
-- Ajustó y corrigió elementos visuales en la página Materias
-- Eliminó elementos defectuosos de la interfaz de materias
-- Agregó botones de redirección funcionales en la página de Grupos
-- Documentó individualmente los avances desde la rama “revisar jefe de carrera”
-- Añadió imágenes al menú del Jefe de Carrera para mejorar la experiencia visual
-- Contribuyó al desarrollo de la página web desde la rama del Jefe de Carrera
-- Estableció conexiones entre botones y sus respectivas páginas
-- Redactó la documentación individual correspondiente
+- git commit -m "docs: redactar documento de Problemática y Solución del sistema"
+- git commit -m "feat: conducir entrevista para levantamiento de requerimientos"
+- git commit -m "docs: corregir y mejorar documentos de Problemática y Solución sobre desempeño estudiantil"
+- git commit -m "style: modificar aspecto visual de la página de Menú del Jefe de Carrera"
+- git commit -m "feat: crear y desarrollar página de Materias para el Jefe de Carrera"
+- git commit -m "ui: diseñar interfaz de la página Materias del Jefe de Carrera"
+- git commit -m "fix: ajustar y corregir elementos visuales en la página Materias"
+- git commit -m "refactor: eliminar elementos defectuosos de la interfaz de materias"
+- git commit -m "feat: agregar botones de redirección funcionales en la página de Grupos"
+- git commit -m "docs: documentar avances desde la rama “revisar jefe de carrera”
+- git commit -m "feat: añadir imágenes al menú del Jefe de Carrera para mejorar experiencia visual"
+- git commit -m "feat: contribuir al desarrollo de la página web desde la rama del Jefe de Carrera"
+- git commit -m "feat: establecer conexiones entre botones y sus respectivas páginas"
+- git commit -m "docs: redactar documentación individual correspondiente"
+ 
