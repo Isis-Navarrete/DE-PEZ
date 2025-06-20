@@ -1,4 +1,4 @@
-Jose Ignacio Ramirez Hernández
+#[Jose Ignacio Ramirez Hernández]
 - Rol de equipo: Analizador y desarrollador
   
 ###Tareas realizadas
