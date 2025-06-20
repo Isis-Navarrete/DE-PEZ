@@ -1,4 +1,4 @@
-Isis -Diaz-Navarrete
+#[Isis -Diaz-Navarrete]
 - Rol de equipo: Analizador y desarrollador de la página web
 
 ###Tareas realizadas
@@ -15,12 +15,18 @@ Isis -Diaz-Navarrete
 - Realizo programación en los botones
 - Agrego campos y conexión entre paginas
 
-##Tecnologias usadas: WordPress, Elementor, forminator
+##Tecnologias usadas: 
+- WordPress, Elementor, forminator
 
 ##Commits
-- Estructura del documento de entrevista
-- Realización de entrevistas
-- Análisis de especificación de requisitos
-- Formularios y validación (Forminator)
-- Flujo de navegación y programación visual (Elementor)
-- Lógica de manejo de alumnos y profesores
+- git commit -m "feat: agregar contenido de entrevistas realizadas a los sujetos pertinentes"
+- git commit -m "docs: análisis de documentación de especificación de requisitos"
+- git commit -m "feat: agregar checklist de asignación y estructuras visuales"
+- git commit -m "feat: crear formularios de modificar profesor y eliminar alumno"
+- git commit -m "feat: implementar lógica para agregar y eliminar profesores y alumnos"
+- git commit -m "fix: ajustes en formularios y flujo de navegación del sistema"
+- git commit -m "feat: integrar plugin final para validación de formularios"
+- git commit -m "feat: agregar botones, párrafos e imágenes al sistema"
+- git commit -m "feat: implementar botones e imágenes incondicionales"
+- git commit -m "feat: programación de acciones en botones"
+- git commit -m "feat: agregar nuevos campos y establecer conexión entre páginas"
