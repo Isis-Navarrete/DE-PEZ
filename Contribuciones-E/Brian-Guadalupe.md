@@ -1,4 +1,4 @@
-Brian Guadalupe Fernández
+#[Brian Guadalupe Fernández]
 - Rol de equipo: DBA y desarrollador de la página web
   
 ###Tareas realizadas
@@ -22,25 +22,26 @@ Brian Guadalupe Fernández
 - Corrigio errores en el plugin agregar docentes
 - Corrigio errores en los plugins modificar y agregar docente, agregando un boton para regresar
   
-###Tecnologias usadas: WordPress, Elementor, forminator, HTML, Php, MySQL, Agregar-alumno, Modificar-alumno, Eliminar-Alumno
+###Tecnologias usadas: 
+- WordPress, Elementor, forminator, HTML, Php, MySQL, Agregar-alumno, Modificar-alumno, Eliminar-Alumno
 
 ##Commits
-- Elaboró el modelo de dominio para la documentación de requisitos
-- Modificó y actualizó el modelo de dominio según las necesidades del sistema
-- Diseñó y creó la base de datos desde cero
-- Documentó el establecimiento de la base de datos
-- Realizó cambios y finalizó la estructura de la tabla usuario
-- Creó el formulario para añadir alumnos
-- Desarrolló el plugin personalizado agregar-alumno
-- Desarrolló el plugin para modificar alumno
-- Migró la base de datos de SQL Server a MySQL
-- Agregó triggers y nuevas tablas para gestionar el estado del alumno
-- Implementó páginas para modificar alumnos, adaptadas al rol del usuario
-- Actualizó datos y reestructuró el modelo de roles en la base de datos
-- Documentó técnicamente el sistema
-- Corrigió errores en los plugins agregar-alumno y modificar-alumno
-- Desarrolló el plugin eliminar-alumno
-- Creó el plugin agregar-docente
-- Implementó el plugin modificar-docente
-- Corrigió errores en el plugin agregar-docente
-- Corrigió errores en los plugins de docente y añadió un botón para regresar
+- git commit -m "docs: elaborar el modelo de dominio para la documentación de requisitos"
+- git commit -m "refactor: modificar y actualizar el modelo de dominio según las necesidades del sistema"
+- git commit -m "feat: diseñar y crear la base de datos desde cero"
+- git commit -m "docs: documentar el establecimiento de la base de datos"
+- git commit -m "feat: realizar cambios y finalizar la estructura de la tabla usuario"
+- git commit -m "feat: crear formulario para añadir alumnos"
+- git commit -m "feat: desarrollar plugin personalizado agregar-alumno"
+- git commit -m "feat: desarrollar plugin para modificar alumno"
+- git commit -m "chore: migrar base de datos de SQL Server a MySQL"
+- git commit -m "feat: agregar triggers y nuevas tablas para gestionar el estado del alumno"
+- git commit -m "feat: implementar páginas para modificar alumnos, adaptadas al rol del usuario"
+- git commit -m "refactor: actualizar datos y reestructurar el modelo de roles en la base de datos"
+- git commit -m "docs: documentar técnicamente el sistema"
+- git commit -m "fix: corregir errores en los plugins agregar-alumno y modificar-alumno"
+- git commit -m "feat: desarrollar plugin eliminar-alumno"
+- git commit -m "feat: crear plugin agregar-docente"
+- git commit -m "feat: implementar plugin modificar-docente"
+- git commit -m "fix: corregir errores en el plugin agregar-docente"
+- git commit -m "fix: corregir errores en los plugins de docente y añadir botón para regresar"
