@@ -16,3 +16,11 @@ Isis -Diaz-Navarrete
 - Agrego campos y conexión entre paginas
 
 ##Tecnologias usadas: WordPress, Elementor, forminator
+
+##Commits
+- Estructura del documento de entrevista
+- Realización de entrevistas
+- Análisis de especificación de requisitos
+- Formularios y validación (Forminator)
+- Flujo de navegación y programación visual (Elementor)
+- Lógica de manejo de alumnos y profesores
