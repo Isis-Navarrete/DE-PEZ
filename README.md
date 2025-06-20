@@ -47,9 +47,7 @@ La mayoría de las funciones se encuentran implementadas y probadas. Algunos mó
  ⚙️ Instalación Local
 Requisitos Previos
 Antes de iniciar con el procedimiento, se debe verificar que el equipo cuente con las siguientes aplicaciones instaladas:
-- XAMPP  
-- Apache  
-- MySQL  
+- XAMPP    
 - Git  
 - Visual Studio Code  
 - Navegador web  
