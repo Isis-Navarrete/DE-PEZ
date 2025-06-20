@@ -1,5 +1,5 @@
 
-Juan Taniz Salazar Franco
+#[Juan Taniz Salazar Franco]
 - Rol de equipo: Líder de proyecto y desarrollador
 
 ###Tareas realizadas
@@ -16,11 +16,19 @@ Juan Taniz Salazar Franco
 - Creo un plugin de alertas para dar notificación de estas
 - Modifico la interfaz de la tabla alertas
 
-##Tecnologías usadas: WordPress, tabla-alertas, menú-tutor, DomCloud, Elementor, Alerta-académica, login-multirol, JavaScript
+###Tecnologías usadas: 
+- WordPress, tabla-alertas, menú-tutor, DomCloud, Elementor, Alerta-académica, login-multirol, JavaScript
 
 ##Commits
-- Cambios en base de datos para seguridad de contraseñas
-- Redirecciones dinámicas desde el login con JavaScript
-- Desarrollo de plugins personalizados: login, alertas y redirección de tutor
-- Creación de interfaces para menú del tutor y selección de grupos
-- Modificación de estructura de alertas y prueba de múltiples interfaces
+- git commit -m "db: permitir contraseñas más largas en tabla usuarios"
+- git commit -m "feat: modificar plugin de login para redirección con JavaScript"
+- git commit -m "refactor: eliminar botones de materias y crear plugin de inicio de sesión"
+- git commit -m "feat: agregar plugin para redirigir a menú del tutor"
+- git commit -m "data: agregar información a la tabla de asignación de materias"
+- git commit -m "feat: crear menú de navegación para el tutor"
+- git commit -m "feat: implementar interfaz de selección de grupo del tutor"
+- git commit -m "feat: agregar plugin que enlaza tutor con su grupo asignado"
+- git commit -m "refactor: eliminar página anterior de login y crear nueva con plugin personalizado"
+- git commit -m "test: crear tres interfaces de prueba para redirección desde login"
+- git commit -m "feat: crear plugin de alertas académicas con notificaciones"
+- git commit -m "ui: modificar interfaz de tabla de alertas para mejorar presentación"
