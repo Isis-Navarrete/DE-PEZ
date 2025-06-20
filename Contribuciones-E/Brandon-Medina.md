@@ -18,7 +18,7 @@
 - git commit -m "docs: diagramar Casos de Uso y Diagrama de Secuencia del sistema"
 - git commit -m "feat: implementar sistema para el módulo de Docentes"
 - git commit -m "feat: desarrollar sección del Tutor académico"
-- git commit -m "feat: implementar acceso y funcionalidades del Jefe de Carrera"
+- git commit -m "feat: implementar funcionalidades del Jefe de Carrera"
 - git commit -m "style: realizar ajustes visuales y estructurales finales en el sitio"
 - git commit -m "style: modificar botones e imágenes en la página de menú del docente"
 - git commit -m "feat: diseñar páginas de Grupos y Semestre para el perfil Docente"
