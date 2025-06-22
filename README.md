@@ -11,6 +11,7 @@ Brindar a los docentes una herramienta intuitiva para agregar, modificar o elimi
 - HTML, CSS, JavaScript, PHP
 - Base de datos MySQL (phpMyAdmin)
 - Servidor: DomCloud
+- Envío de correos desde el plugin usando API de SMTP2GO
 - Pliguin personalizado: Alerta academica (Shortcode: [menu_tutor_grupo])
 - Pluguin personalizado: login-multirol-redaccion (shortcode: [ login_real])
 - Pluguin personalizado: menu-tutor (Shortcode:[menu_tutor_grupo])
@@ -114,7 +115,7 @@ Jefe de carrera
 - Contraseña: 4qE_I-aD67q61D(Nun
 
 Contacto
-Para acceder al dominio donde está alojada la página o el administrador de archivos en Webmin, contactar a:
+Para acceder al dominio donde está alojada la página , el administrador de archivos en Webmin o configurar la API de SMTP2GO ,contactar a:
 
 Juan Taniz Salazar Franco  
 - Correo: juan.salazar.22isc@tecsanpedro.edu.mx  
