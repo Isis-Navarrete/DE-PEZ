@@ -112,10 +112,10 @@ define( 'WP_DEBUG', false );
 /* Add any custom values between this line and the "stop editing" line. */
 
 //Si no funciona
-define('WP_DEBUG', true);
-define('WP_DEBUG_LOG', true);
-define('WP_DEBUG_DISPLAY', true); // o false para evitar mostrar en pantalla
-@ini_set('display_errors', 1);
+//define('WP_DEBUG', true);
+//define('WP_DEBUG_LOG', true);
+//define('WP_DEBUG_DISPLAY', true); // o false para evitar mostrar en pantalla
+//@ini_set('display_errors', 1);
 //borrar este bloque de codigo
 
 /* That's all, stop editing! Happy publishing. */
